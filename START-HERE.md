@@ -11,6 +11,12 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - **Scene** opens a picker with 18 backgrounds, including House, Castle, Jungle, Volcano, Desert, Candy Land, Spooky Forest, Moon, Mars, Beach, Stadium and Rainbow Sky.
 - **My heroes** saves the current drawing (with its outfit and morph) under a name. Saved heroes can be loaded again later and can fight each other in VS Fight.
 
+**Music**
+
+- Tap the **🎵** button (top right, also in games) to open Music. The built-in **Elevator Groove** plays by default from the first tap: an original, jazzy elevator jam written for the game so it stays free to share.
+- **My song** plays any audio file from this device. Tap "Pick a song file" and choose a song from the Files app (or iCloud Drive). The song is kept on the device only and comes back next time. Use it for a real track you own, for example a bought copy of the DOORS Elevator Jam: the actual recording cannot be built into the game because it is copyrighted.
+- **Music off**, and a Soft / Normal / Loud volume. The Sound button still controls the sound effects separately.
+
 **Games**
 
 - Mini games (green buttons): Jump & Run, Endless Dash, Star Catch, Sky Flap, Bubble Pop, Meteor Dodge, Cloud Bounce, Goal Kick. Outfits and morph show in all of them.
