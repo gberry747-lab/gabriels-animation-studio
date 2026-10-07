@@ -15,4 +15,4 @@ See `START-HERE.md` for how to play and how to update the hosted copy.
 
 Tip for iPad: open the link in Safari, tap Share, then **Add to Home Screen** so it opens full-screen like an app.
 
-Developer check: `node test/run.js` runs 41 headless logic checks (no packages needed).
+Developer check: `node test/run.js` runs 48 headless logic checks (no packages needed).
