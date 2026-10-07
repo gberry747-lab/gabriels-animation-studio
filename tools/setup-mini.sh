@@ -10,14 +10,16 @@ if [ ! -d "$REPO/.git" ]; then
   git clone https://github.com/gberry747-lab/gabriels-animation-studio.git "$REPO"
 fi
 cd "$REPO"
-git remote set-url origin git@github.com:gberry747-lab/gabriels-animation-studio.git
+git remote set-url origin git@github.com-gabriel:gberry747-lab/gabriels-animation-studio.git
 git status -sb | head -1
 
 echo "== 2. GitHub key for pushing (deploy key on the repo)"
 if [ ! -f ~/.ssh/mini_to_github ]; then
   ssh-keygen -q -t ed25519 -N "" -C "mini-gabriels-games" -f ~/.ssh/mini_to_github
 fi
-grep -q "Host github.com" ~/.ssh/config 2>/dev/null || printf "\nHost github.com\n  IdentityFile ~/.ssh/mini_to_github\n  IdentitiesOnly yes\n" >> ~/.ssh/config
+# Dedicated alias: the Mini already has other github.com-* aliases (SHC deploy keys), so a bare
+# "Host github.com" grep matches them and the key would never be wired (bitten 2026-10-07).
+grep -q "^Host github.com-gabriel" ~/.ssh/config 2>/dev/null || printf "\nHost github.com-gabriel\n  HostName github.com\n  User git\n  IdentityFile ~/.ssh/mini_to_github\n  IdentitiesOnly yes\n" >> ~/.ssh/config
 echo "public key (add as a deploy key with write access if not done yet):"
 cat ~/.ssh/mini_to_github.pub
 
@@ -37,5 +39,5 @@ echo "== 4. tests"
 if command -v node >/dev/null 2>&1; then node test/run.js | tail -1; fi
 
 echo "== 5. push access check"
-ssh -o BatchMode=yes -o ConnectTimeout=10 -T git@github.com 2>&1 | head -1 || true
+ssh -o BatchMode=yes -o ConnectTimeout=10 -T git@github.com-gabriel 2>&1 | head -1 || true
 echo "done"
