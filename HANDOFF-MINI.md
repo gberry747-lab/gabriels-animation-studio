@@ -22,3 +22,13 @@ Gregory wants all the games to live on the Mini. The laptop session got as far a
 - The Mini's user is `gregoryeberry` (Tailscale 100.100.208.87); the Studio's is `GregoryBerry` (100.85.18.68).
 - The Mini has git and python3 but, as of 10/7, no node, no gh, no GitHub SSH key.
 - Firebase console for the game = Chrome on the Mini (signed in as mindtheshop247). The laptop's Chrome is gberry747 and cannot see the project.
+
+## Done on the Mini - 7 October 2026 (Claude session on the Mini)
+
+1. Cloned to `~/gabriels-animation-studio`; `tools/setup-mini.sh` ran clean. Node v24.21.0 was already on the Mini (Homebrew). 50 tests pass.
+2. Deploy key `mac-mini` (read-write) added to the repo with `gh` (the Mini DOES have `gh`, logged in as gberry747-lab; the trap list above was wrong on that).
+3. The key is wired through a dedicated SSH alias `github.com-gabriel` and the remote is `git@github.com-gabriel:gberry747-lab/gabriels-animation-studio.git`. The script's original `grep -q "Host github.com"` matched the Mini's existing `github.com-shc` style aliases and skipped the config, so push failed on the first run; the script now checks for its own alias. Push from the Mini verified.
+4. `.claude/launch.json` on the Mini: server "game" on http://localhost:8766.
+5. Memory note `personal/project_gabriel_animation_studio_game.md` written: the Mini is the home clone, the laptop clone is secondary (fetch first).
+
+The laptop clone must `git fetch` before any further work.
