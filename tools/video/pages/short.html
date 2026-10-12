@@ -1,0 +1,13 @@
+<!doctype html><meta charset=utf-8><style>
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;font-family:'Arial Rounded MT Bold',ui-rounded,sans-serif;color:#292c2a}
+body{background:linear-gradient(170deg,var(--a),var(--b));display:flex;flex-direction:column;align-items:center}
+.pill{margin-top:110px;background:#e53950;color:#fff;font-size:44px;padding:14px 38px;border-radius:40px;border:5px solid #292c2a;box-shadow:0 7px 0 #292c2a}
+.e{font-size:150px;margin-top:40px;line-height:1}
+h1{font-size:104px;margin:16px 40px 0;text-align:center;color:#fff;-webkit-text-stroke:7px #292c2a;paint-order:stroke fill;line-height:1.05}
+.frame{position:absolute;left:24px;top:716px;width:1032px;height:582px;border-radius:30px;border:6px solid #292c2a;background:#292c2a;box-shadow:0 12px 0 #292c2a55}
+.tips{position:absolute;top:1360px;left:60px;right:60px;font-size:46px;line-height:1.3}
+.tips div{background:#fffdf6ee;border:4px solid #292c2a;border-radius:26px;padding:16px 26px;margin-bottom:22px;box-shadow:0 6px 0 #292c2a44}
+.brand{position:absolute;bottom:64px;font-size:46px;color:#fff;-webkit-text-stroke:4px #292c2a;paint-order:stroke fill}
+.brand span{color:#ffd166}
+</style><div class=pill id=pill>🎬 HOW TO PLAY</div><div class=e id=e></div><h1 id=t></h1><div class=frame></div><div class=tips id=tips></div><div class=brand>Gabriel's <span>Animation Studio</span></div>
+<script>const q=new URLSearchParams(location.search);document.body.style.setProperty('--a',q.get('a')||'#ffd166');document.body.style.setProperty('--b',q.get('b')||'#ff8a5c');e.textContent=q.get('e')||'';t.textContent=q.get('t')||'';if(q.get('pill'))pill.textContent=q.get('pill');for(const x of (q.get('tips')||'').split('|').filter(Boolean)){const d=document.createElement('div');d.textContent=x;tips.append(d);}</script>
