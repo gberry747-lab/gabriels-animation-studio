@@ -88,9 +88,17 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - 3 worlds of 8: Meadow (puppy), Rocky Canyon (kitten, spiky pillars), Cloud Kingdom (bunny, no-ink zones).
 - For developers: `node tools/path-gen.js` makes the levels and writes them into index.html. It keeps a layout only if doing nothing loses, a straight line loses (after level 2), and a wobbly, smoothed hand-drawn line wins at least 4 times out of 5 with all 3 gems reachable. Tests replay every saved solution.
 
+**Monster Pals (new, 25 pals)**
+
+- Visit a place (Garden, Beach, Snowy Hill, Volcano, Starry Sky) to meet a slime pal, then win its friendship in one of three mini-games: Snack Toss (tap where the pal will be to throw its favourite snack; feed it 3 times), Copy Dance (repeat its moves with the arrow buttons; 3 rounds) or Peekaboo (tap it when it peeks out of a bush; 5 tickles, 3 misses and it gets shy).
+- Every friend goes in the 📖 Pal Book. Meeting a friend again raises its friendship up to 3 hearts. New places open at 3, 7, 12 and 17 pals. ⭐⭐⭐ pals are rare and a bit harder.
+- Make any friend your Buddy: your Buddy adds 10% bonus coins (at least 1) to every game.
+- Pals do not need a drawing, so this game works even before you draw a hero.
+- For developers: `node tools/pals-bot.js` plays every pal in every mini-game. A careful player always wins, a kid aiming at where the pal is now wins about 80% of Snack Tosses, and random tapping almost never works.
+
 **Coins and the Gear Shop**
 
-- Every game pays coins when it ends: about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
+- Every game pays coins when it ends (plus 10% with a Monster Pals Buddy): about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
 - 🛒 Gear Shop (in Games and in Gear Up) sells 17 new items: skins (Candy, Shadow, Diamond, Neon, Dragon), capes (Lightning, Royal, Candy, Diamond), weapons (Fire sword, Ice sword, Star staff), hats (Unicorn horn, Headphones, Flame hair) and tops (Jersey, Knight armor). Each card shows your own hero wearing it. Prices run 60 to 300 coins.
 - Bought items appear in the Gear Up rows and work in every game. All the original gear stays free.
 - Coins and bought items save on the device (in the same save as game progress).
