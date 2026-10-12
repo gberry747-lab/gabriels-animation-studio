@@ -96,6 +96,11 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - Pals do not need a drawing, so this game works even before you draw a hero.
 - For developers: `node tools/pals-bot.js` plays every pal in every mini-game. A careful player always wins, a kid aiming at where the pal is now wins about 80% of Snack Tosses, and random tapping almost never works.
 
+**Endless Dash upgrades (new)**
+
+- Bought with coins in the 🛒 Gear Shop (bottom section) and always on once owned: 🚀 Rocket Start (zoom ahead safely for the first 3 seconds), 🫧 Bubble Shield (blocks one bump each run), 🧲 Star Magnet (pulls nearby stars to you), 🎒 Jetpack (two extra boosts in the air, so up to 4 jumps).
+- Endless Dash now pays coins by how far you get (4 coins plus 1 for every 25 points of score).
+
 **Coins and the Gear Shop**
 
 - Every game pays coins when it ends (plus 10% with a Monster Pals Buddy): about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
