@@ -22,9 +22,10 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 
 **Music**
 
-- Tap the **🎵** button (top right, also in games) to open Music. The built-in **Elevator Groove** plays by default from the first tap: an original, jazzy elevator jam written for the game so it stays free to share.
-- **My song** plays any audio file from this device. Tap "Pick a song file" and choose a song from the Files app (or iCloud Drive). The song is kept on the device only and comes back next time. Use it for a real track you own, for example a bought copy of the DOORS Elevator Jam: the actual recording cannot be built into the game because it is copyrighted.
-- **Music off**, and a Soft / Normal / Loud volume. The Sound button still controls the sound effects separately.
+- Tap the **🎵** button (top right, also in games) to open the Music picker. Tap a song to hear it straight away; the button shows which one is playing, and your choice is remembered.
+- 7 built-in songs, all original and made by the game's own synth (nothing to license): 🎹 Elevator Groove, 🦸 Hero March, 🚀 Space Bleeps, 🏖️ Beach Bounce, 🎃 Spooky Hop, 🌙 Chill Clouds, ⚡ Turbo Chase.
+- **My song** plays any audio file from this device (pick it from the Files app or iCloud Drive). It stays on the device only. Use it for a real song you own; real songs cannot be built into the game because they are copyrighted.
+- **Music off**, and a Soft / Normal / Loud volume. The Sound button still controls the sound effects separately. Beat Run pauses the music while its own beat plays.
 
 **Games**
 

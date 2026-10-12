@@ -9,10 +9,10 @@ Built for iPad (finger or Apple Pencil) and works on any computer too.
 
 The whole game is one file, `index.html`, plus the Matter.js physics library in `vendor/`. No install, no build, no accounts.
 Drawings, saved heroes, best scores, Space Quest progress and your own music file are saved in the browser on the device.
-A built-in original tune (Elevator Groove) plays by default; pick your own song file from the 🎵 Music button.
+7 built-in original songs to pick from in the 🎵 Music panel (Elevator Groove plays by default), or play your own song file.
 
 See `START-HERE.md` for how to play and how to update the hosted copy.
 
 **Install as an offline app:** open the link in Safari on the iPad, tap Share, then **Add to Home Screen**. Open it once online; after that it works with no internet (only the online leaderboards and Online VS need a connection). See `START-HERE.md`.
 
-Developer check: `node test/run.js` runs 95 headless logic checks (no packages needed).
+Developer check: `node test/run.js` runs 96 headless logic checks (no packages needed).
