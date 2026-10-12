@@ -101,6 +101,12 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - Bought with coins in the 🛒 Gear Shop (bottom section) and always on once owned: 🚀 Rocket Start (zoom ahead safely for the first 3 seconds), 🫧 Bubble Shield (blocks one bump each run), 🧲 Star Magnet (pulls nearby stars to you), 🎒 Jetpack (two extra boosts in the air, so up to 4 jumps).
 - Endless Dash now pays coins by how far you get (4 coins plus 1 for every 25 points of score).
 
+**🎬 How to play (guided demos)**
+
+- Every big adventure (Slingshot Siege, Backyard Defense, Hero Kart, Gem Quest, Beat Run, Draw Path, Monster Pals) has a 🎬 How to play button at the top of its menu. It plays a real level by itself with big captions and a pointing finger showing each step, then offers "Let's play".
+- Taps are ignored during a demo except ✖ Skip (bottom right). Nothing a demo does is kept: stars, coins, pals and the leaderboard are exactly as they were.
+- For developers: the demos are scripts in `TUTORIALS` (index.html). Tests run every demo and check it really plays (the slingshot shot clears the level, the path rescues the puppy, and so on) and leaves progress untouched.
+
 **Coins and the Gear Shop**
 
 - Every game pays coins when it ends (plus 10% with a Monster Pals Buddy): about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
