@@ -80,6 +80,14 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - 3 places of 6 songs that get faster: Sunny Park (92 bpm), Ocean Pier, Space Station (up to 136 bpm). The beat and tune are made by the game's own synth, so there is no music to license. The Groove background music pauses while a song plays.
 - For developers: `node tools/beat-bot.js` checks a robot jumping exactly on the beat keeps all 3 hearts on every song, and that not jumping always loses. Jumping up to about 0.2 of a beat early or 0.15 late still clears everything.
 
+**Draw Path (new, 24 puzzles)**
+
+- A pet is lost. Draw ramps and bridges with your finger (ink is limited, shown top left), press ▶ GO, and your hero rolls to the rescue in a bubble. Reach the basket to rescue the pet; grab the 💎 gems on the way (all 3 = 3 stars).
+- Spikes pop the bubble and you cannot draw inside the red striped no-ink zones. ↶ Undo removes the last line, ✖ Clear removes them all. If the hero falls or gets stuck, your lines stay so you can fix them. After 3 tries a dotted hint appears.
+- Lines are smoothed when you lift your finger, so a wobbly hand still makes a good ramp.
+- 3 worlds of 8: Meadow (puppy), Rocky Canyon (kitten, spiky pillars), Cloud Kingdom (bunny, no-ink zones).
+- For developers: `node tools/path-gen.js` makes the levels and writes them into index.html. It keeps a layout only if doing nothing loses, a straight line loses (after level 2), and a wobbly, smoothed hand-drawn line wins at least 4 times out of 5 with all 3 gems reachable. Tests replay every saved solution.
+
 **Coins and the Gear Shop**
 
 - Every game pays coins when it ends: about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
