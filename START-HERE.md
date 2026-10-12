@@ -40,6 +40,7 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 **Slingshot Siege (new, 60 levels)**
 
 - The big orange button in Games. Fling your own drawn hero from a slingshot at wobbly towers and knock out every monster. Drag back anywhere on the left half of the picture, aim with the dotted line, and let go.
+- Towers are built from real physics blocks: a hit shoves and topples them, glass shatters, wood breaks on big crashes, stone mostly falls over, and broken blocks split into tumbling pieces.
 - 5 worlds with 12 levels each: Backyard (wood and glass), Castle (tough stone), Jungle (towers up on stumps), Moon (low gravity, heroes fly far) and Volcano (TNT crates explode). Level 12 of every world is a 👑 boss fort. Beating a boss opens the next world.
 - Stars: 3 stars for using 2 or fewer heroes than you were given (or clearing it with one hero), 2 stars with one hero to spare, 1 star otherwise. Replay levels any time to improve.
 - Stars unlock powers: 💣 Boom at 5 stars, ⚡ Dash at 14, 🦘 Hop at 26, 🪨 Heavy at 40. Pick a power with the buttons at the top left, fling, then tap the screen in the air to use it. Each power works once per level.
@@ -59,10 +60,11 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 **Hero Kart (new, 5 roads)**
 
 - Drive your hero over endless hills. Hold ⚡ Go (or the right side of the picture, or the right arrow key) and 🛑 Brake (left). In the air, Go leans back and Brake leans forward. Landing on your head ends the drive.
-- Battery drains while you drive; grab 🔋 battery cells to refill it. They get further apart the further you go. Coins on the road go straight into your wallet.
+- Battery drains while you drive; grab 🔋 battery cells to refill it. They get a little further apart the further you go. Coins on the road go straight into your wallet.
+- Every road ends at a 🏁 finish line at 2500 m ("Road complete!").
 - Garage (in the Hero Kart menu): spend coins on ⚙️ Engine, 🛞 Tires (grip on sand and snow), 🔋 Battery and 🌀 Springs, 5 levels each.
-- Stars at 300 m, 1000 m and 2500 m. Reaching 600 m opens the next road: Green Hills, Desert Dunes, Snowy Peaks, Moon Base (low gravity), Volcano Road.
-- For developers: `node tools/kart-bot.js` drives every road with no upgrades, level 3 and maxed. A plain kart reaches about 300 m (one star, not enough to open the next road), level 3 about 2,300 to 3,400 m, and maxed about 5,700 m. A test checks no road ever gets steeper than 36 degrees.
+- Stars at 300 m and 1000 m, and the third star for reaching the finish. Reaching 600 m opens the next road: Green Hills, Desert Dunes, Snowy Peaks, Moon Base (low gravity), Volcano Road.
+- For developers: `node tools/kart-bot.js` drives every road with no upgrades, level 3 and maxed. A plain kart reaches about 2,250 m (two stars), and one upgrade level is enough to reach the finish on every road (about 60 to 90 seconds a run). A test checks no road ever gets steeper than 36 degrees.
 
 **Gem Quest (new, 30 levels)**
 
@@ -106,6 +108,10 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - Every big adventure (Slingshot Siege, Backyard Defense, Hero Kart, Gem Quest, Beat Run, Draw Path, Monster Pals) has a 🎬 How to play button at the top of its menu. It plays a real level by itself with big captions and a pointing finger showing each step, then offers "Let's play".
 - Taps are ignored during a demo except ✖ Skip (bottom right). Nothing a demo does is kept: stars, coins, pals and the leaderboard are exactly as they were.
 - For developers: the demos are scripts in `TUTORIALS` (index.html). Tests run every demo and check it really plays (the slingshot shot clears the level, the path rescues the puppy, and so on) and leaves progress untouched.
+
+**Fits every iPad**
+
+- During a game the picture shrinks automatically so the title bar, picture, message and buttons always fit on screen, in portrait or landscape, with or without Safari's toolbars.
 
 **Coins and the Gear Shop**
 
