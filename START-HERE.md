@@ -37,6 +37,16 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - **House Hunt**: walk through eight rooms (garage, living room, kitchen, backyard, bedroom, bathroom, playroom, basement) and find eight hidden things. Doors are at the edges of a room; use the Up and Down buttons at the stairs. Best time is saved.
 - **Online VS (beta)**: play a friend on another iPad or computer. One player taps Host and gets a four-letter code, the other taps Join and types it. It uses a free public matchmaking helper, so it can sometimes fail to connect; if it does, try again or play on one screen. Your drawing is sent only to the friend you play with.
 
+**Slingshot Siege (new, 60 levels)**
+
+- The big orange button in Games. Fling your own drawn hero from a slingshot at wobbly towers and knock out every monster. Drag back anywhere on the left half of the picture, aim with the dotted line, and let go.
+- 5 worlds with 12 levels each: Backyard (wood and glass), Castle (tough stone), Jungle (towers up on stumps), Moon (low gravity, heroes fly far) and Volcano (TNT crates explode). Level 12 of every world is a 👑 boss fort. Beating a boss opens the next world.
+- Stars: 3 stars for using 2 or fewer heroes than you were given (or clearing it with one hero), 2 stars with one hero to spare, 1 star otherwise. Replay levels any time to improve.
+- Stars unlock powers: 💣 Boom at 5 stars, ⚡ Dash at 14, ✨ Split at 26, 🪨 Heavy at 40. Pick a power with the buttons at the top left, fling, then tap the screen in the air to use it. Each power works once per level.
+- Total stars go on the Top 10 leaderboard (hold the button for a second to see it). Progress saves on the device.
+- Keyboard: arrow keys aim (up and down change the angle, left and right the strength), F fires or uses the power, G picks a power.
+- For developers: physics is Matter.js 0.20.0 (MIT) in `vendor/matter.min.js`. Levels come from a fixed recipe and seed, so level 7 is always the same. `node tools/sling-probe.js` checks that every level stands still before the first shot; `node tools/sling-solve.js <world 0-4>` plays every level by trying shots and proves each is beatable with plain heroes (all 60 were, most with heroes to spare).
+
 **Controls**
 
 - On screen: the big buttons under the picture. Tapping the picture jumps in the running games and in Space Quest.

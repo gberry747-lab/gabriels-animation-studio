@@ -1,9 +1,9 @@
 // Offline support for Gabriel's Animation Studio.
-// Online: always fetch the newest game (so GitHub Pages updates still arrive), and refresh the cache.
+// Online: always fetch the newest game files (so GitHub Pages updates still arrive), and refresh the cache.
 // Offline or slow network: play from the cached copy.
 // Bump VERSION only when the list of app files below changes.
-const VERSION = 'gas-v1';
-const APP_FILES = ['./', './index.html', './manifest.webmanifest', './icons/apple-touch-icon.png', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png'];
+const VERSION = 'gas-v2';
+const APP_FILES = ['./', './index.html', './manifest.webmanifest', './icons/apple-touch-icon.png', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './vendor/matter.min.js'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(APP_FILES)).then(() => self.skipWaiting()));
@@ -34,8 +34,6 @@ self.addEventListener('fetch', e => {
     e.respondWith(fresh(req, './index.html', 4000).catch(() => caches.match('./index.html', {ignoreSearch: true})));
     return;
   }
-  e.respondWith(caches.match(req, {ignoreSearch: true}).then(hit => {
-    const net = fresh(req, req, 8000).catch(() => hit);
-    return hit || net;
-  }));
+  // Network first for every game file too, so index.html and the files it loads always come from the same version.
+  e.respondWith(fresh(req, req, 4000).catch(() => caches.match(req, {ignoreSearch: true})));
 });
