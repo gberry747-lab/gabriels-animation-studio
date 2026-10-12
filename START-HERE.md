@@ -5,7 +5,7 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 
 **Install it as an app (works with no internet)**
 
-- On the iPad: open the address above in **Safari**, tap **Share**, then **Add to Home Screen**, then **Add**. An "Animation Studio" icon (a red stick figure) appears on the Home Screen and opens full-screen like a real app.
+- On the iPad: open the address above in **Safari**, tap **Share**, then **Add to Home Screen**, then **Add**. A "Gabriel's Animation Studio" icon (a red stick figure) appears on the Home Screen and opens full-screen like a real app.
 - Open it once while online. After that it works with no Wi-Fi at all: in the car, on a plane, anywhere. Drawing, Power Moves, Gear Up and every single-device game work offline.
 - Needs internet: the online Top-10 leaderboards (scores made offline are kept and sent the next time it is online) and Online VS.
 - Updates arrive by themselves: whenever the app opens online it loads the newest version. If a change does not show, close the app fully and open it again.
