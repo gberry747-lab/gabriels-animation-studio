@@ -114,6 +114,25 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 
 - During a game the picture shrinks automatically so the title bar, picture, message and buttons always fit on screen, in portrait or landscape, with or without Safari's toolbars.
 
+**Seasonal events (switch on by the iPad's date)**
+
+| Season | Dates | Game |
+|---|---|---|
+| 🎆 New Year's | Dec 31 to Jan 10 | Countdown Party (rhythm run with fireworks and a countdown) |
+| 💘 Valentine's Day | Feb 1 to 15 | Heart Match (match-3 with heart stones) |
+| ☘️ St. Patrick's Day | Mar 1 to 18 | Catch the Leprechaun (tap him when he peeks out) |
+| 🐣 Spring | Mar 19 to Apr 30 | Egg Guard (guard the spring eggs from slimes) |
+| 🎇 4th of July | Jun 20 to Jul 10 | Firework Fling (slingshot at firework crates) |
+| 🏖️ Summer | Jul 11 to Sep 5 | Beach Buggy (drive along the shore) |
+| 🎃 Halloween | Oct 1 to Nov 2 | Pumpkin Smash (slingshot at pumpkin towers) |
+| 🦃 Thanksgiving | Nov 3 to 30 | Turkey Trail (draw a path to a lost turkey) |
+| 🎄 Christmas | Dec 1 to 30 | Sleigh Ride (deliver presents by sleigh) |
+
+- During a season the app takes on the season's colours, the drawing page has falling decorations (leaves, snow, hearts, clovers...), and a banner in Games opens the seasonal game. 📅 Seasons shows every event and when it comes back.
+- Each seasonal game has 3 to 8 levels. Finishing half of them earns the first seasonal gear item, finishing them all earns the second (18 items in all, such as the 🎃 Pumpkin head, 🎅 Santa hat and ✨ Sparkler). Seasonal gear is free, never sold, and kept forever.
+- To preview a season outside its dates, add `?season=christmas` (or any season id) to the address.
+- For developers: `node tools/season-check.js` plays every level of every seasonal game with a robot suited to it (all can be won). Thanksgiving's puzzles come from `tools/path-gen.js`.
+
 **Coins and the Gear Shop**
 
 - Every game pays coins when it ends (plus 10% with a Monster Pals Buddy): about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
