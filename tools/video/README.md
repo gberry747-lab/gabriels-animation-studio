@@ -12,4 +12,4 @@ Made 12 Oct 2026. Needs Google Chrome, Node, Python 3 with Pillow, and ffmpeg (`
    - Tutorial shorts: `node record_tut.mjs tut`, render `pages/short.html` backgrounds with `cards.mjs`, then overlay (see the session notes)
    - Promos: `node record_promo.mjs promo`, `node record_promo_games.mjs promo/games`, then `python3 build_promo.py [vertical|youtube|feed]`
 - `music.py` writes the original background music (no licensing needed).
-- To change the promo end card (for example "Coming soon!" to a store link), edit `pages/end.html` (the `soon` text) and rerun `build_promo.py`.
+- The promo end card has no call to action. To add one (for example a store link), pass `soon=<text>` in the end-card URL in `build_promo.py` and rerun it.
