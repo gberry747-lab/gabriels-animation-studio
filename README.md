@@ -1,7 +1,7 @@
 # Gabriel's Animation Studio
 
 Draw a stick figure, dress it up, morph it into a real character, then make it walk, dance or fly and play with it:
-**Slingshot Siege** (60 physics levels across 5 worlds, with stars and unlockable powers), **Backyard Defense** (30 lane-defence levels where your hero in different gear guards the clubhouse), **Hero Kart** (drive over endless hills and upgrade your kart), **Gem Quest** (30 match-3 levels with power stones), **Beat Run** (18 rhythm songs), **Draw Path** (24 draw-a-ramp physics puzzles), **Monster Pals** (befriend and collect 25 slime pals), **Note Rush** (15 piano or guitar songs that speed up every round), 9 **seasonal events** with their own games and gear, a coin-powered **Gear Shop** (with Endless Dash upgrades), 🎬 How to play demos for every big game, eight mini games, a two-player VS Fight (or fight the computer), Monster Brawl, a Space Quest from Earth to the Sun, Sky Pilot (fly a plane), Hoop Shot (basketball),
+**Slingshot Siege** (60 physics levels across 5 worlds, with stars and unlockable powers), **Backyard Defense** (30 lane-defence levels where your hero in different gear guards the clubhouse), **Hero Kart** (drive over endless hills and upgrade your kart), **Gem Quest** (30 match-3 levels with power stones), **Beat Run** (18 rhythm songs), **Draw Path** (24 draw-a-ramp physics puzzles), **Monster Pals** (befriend and collect 25 slime pals), **Note Rush** (15 piano or guitar songs that speed up every round), 9 **seasonal events** with their own games and gear, a speed button in every game (up to 3x in the driving, flying and running games), a coin-powered **Gear Shop** (with Endless Dash upgrades), 🎬 How to play demos for every big game, eight mini games, a two-player VS Fight (or fight the computer), Monster Brawl, a Space Quest from Earth to the Sun, Sky Pilot (fly a plane), Hoop Shot (basketball),
 a House Hunt through eight rooms, and a beta online VS mode with room codes.
 Built for iPad (finger or Apple Pencil) and works on any computer too.
 
@@ -15,4 +15,4 @@ See `START-HERE.md` for how to play and how to update the hosted copy.
 
 **Install as an offline app:** open the link in Safari on the iPad, tap Share, then **Add to Home Screen**. Open it once online; after that it works with no internet (only the online leaderboards and Online VS need a connection). See `START-HERE.md`.
 
-Developer check: `node test/run.js` runs 100 headless logic checks (no packages needed).
+Developer check: `node test/run.js` runs 102 headless logic checks (no packages needed).

@@ -13,16 +13,20 @@ seg() { # name speed title subtitle
 card card_intro.png 00_intro 3.5
 seg sling 1 'Slingshot Siege' 'Fling your hero at monster towers!'
 seg defense 1.8 'Backyard Defense' 'Your hero guards the clubhouse from slimes'
-seg kart 1 'Hero Kart' 'Drive over hills and upgrade your kart'
+seg kart 1 'Hero Kart' 'Tap the speed button to go 2x, even 3x!'
 seg gems 1.2 'Gem Quest' 'Match stones, then tap your hero for a Hero Blast'
 seg beat 1 'Beat Run' 'Jump on the beat. Hold for a big jump!'
 seg path 1 'Draw Path' 'Draw a ramp to rescue a lost puppy'
 seg pals 1.25 'Monster Pals' 'Make friends with 25 slime pals'
+seg notes 1 'Note Rush' 'Play piano or guitar. It gets FASTER every round!'
+seg halloween 1 'Halloween: Pumpkin Smash' 'A new game for every holiday!'
+seg christmas 1 'Christmas: Sleigh Ride' 'Deliver presents over the snowy hills'
+seg newyear 1 "New Year's: Countdown Party" 'Jump to the beat until midnight'
 ffmpeg -loglevel error -y -i menu.png -vf "crop=1280:720:10:140" menu_crop.png
 python3 $V/banner.py $T/b_menu.png 1280 720 bottom 'Find them in Games, under Big adventures'
 ffmpeg -loglevel error -y -loop 1 -t 3.5 -i menu_crop.png -i $T/b_menu.png -filter_complex "[0][1]overlay=0:0,fade=t=in:st=0:d=0.4,fade=t=out:st=3.10:d=0.4" $enc $T/08_menu.mp4
 card card_outro.png 09_outro 4
-printf "file '%s'\n" $T/00_intro.mp4 $T/sling.mp4 $T/defense.mp4 $T/kart.mp4 $T/gems.mp4 $T/beat.mp4 $T/path.mp4 $T/pals.mp4 $T/08_menu.mp4 $T/09_outro.mp4 > $T/list.txt
+printf "file '%s'\n" $T/00_intro.mp4 $T/sling.mp4 $T/defense.mp4 $T/kart.mp4 $T/gems.mp4 $T/beat.mp4 $T/path.mp4 $T/pals.mp4 $T/notes.mp4 $T/halloween.mp4 $T/christmas.mp4 $T/newyear.mp4 $T/08_menu.mp4 $T/09_outro.mp4 > $T/list.txt
 ffmpeg -loglevel error -y -f concat -safe 0 -i $T/list.txt -vf "settb=AVTB,setpts=N/30/TB,fps=30" $enc $T/video.mp4
 LEN=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $T/video.mp4)
 python3 $V/music.py $T/music.wav $LEN 112 7 tour

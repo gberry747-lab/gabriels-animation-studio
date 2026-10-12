@@ -27,13 +27,16 @@ CLIPS = [
  ('hook', 2.9, 2.5, 1.0, [big('...became a <i>VIDEO GAME HERO?</i>')]),
  ('hook', 8.4, 4.5, 1.5, [big('Give it <b>gear</b>, then <i>MORPH</i> it! ✨')]),
  ('hook', 12.9, 4.0, 1.35, [big('Now it\'s <b>YOUR</b> game!')]),
- ('sling', 1.6, 3.6, 1.3, [big('<b>7</b> big adventures'), stk('🎯 Slingshot Siege', '#ffd98a')]),
+ ('sling', 1.6, 3.6, 1.3, [big('<b>8</b> big adventures'), stk('🎯 Slingshot Siege', '#ffd98a')]),
  ('defense', 7.0, 6.0, 2.4, [stk('🛡️ Backyard Defense', '#bfe8a8', rot=3)]),
- ('kart', 2.0, 3.0, 1.0, [stk('🏎️ Hero Kart', '#ffd0d0')]),
+ ('kart', 2.0, 3.4, 1.0, [big('Go <b>2x</b>... even <i>3x</i> speed!'), stk('🏎️ Hero Kart', '#ffd0d0')]),
  ('gems', 3.0, 4.2, 1.6, [stk('💎 Gem Quest', '#e2d4ff', rot=3)]),
  ('beat', 4.0, 3.0, 1.0, [stk('🎵 Beat Run', '#ffe0f0')]),
  ('path', 0.9, 6.0, 2.2, [stk('✏️ Draw Path', '#fff3c4', rot=3)]),
  ('pals', 3.0, 4.5, 1.6, [stk('🐾 Monster Pals', '#d4f5e0')]),
+ ('notes', 2.4, 4.6, 1.0, [stk('🎹 Note Rush', '#ffd166', rot=3)]),
+ ('halloween', 1.0, 5.0, 1.25, [big('New games every <i>HOLIDAY!</i>'), stk('🎃 Halloween', '#ffb15c')]),
+ ('christmas', 0.8, 3.2, 1.0, [big('New games every <i>HOLIDAY!</i>'), stk('🎄 Christmas', '#ff9a9a', rot=3)]),
 ]
 END_SECS = 4.5
 

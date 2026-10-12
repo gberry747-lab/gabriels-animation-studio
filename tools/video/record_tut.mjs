@@ -15,7 +15,7 @@ const view=async(w,h)=>send('Emulation.setDeviceMetricsOverride',{width:w,height
 // ---- the game ----
 await view(1300,1000);await send('Page.navigate',{url:'http://localhost:8766/zz-seed.html'});await sleep(2500);
 await ev(`(()=>{window.D={c:document.getElementById('canvas'),pt(x,y){const r=this.c.getBoundingClientRect();return{clientX:r.left+x*r.width/1280,clientY:r.top+y*r.height/720}},ev(type,x,y){this.c.dispatchEvent(new PointerEvent(type,{bubbles:true,pointerId:5,pointerType:'touch',isPrimary:true,button:0,...this.pt(x,y)}))},sleep:ms=>new Promise(r=>setTimeout(r,ms)),async drag(pts,ms){this.ev('pointerdown',pts[0].x,pts[0].y);for(let i=1;i<pts.length;i++){await this.sleep(ms/pts.length);this.ev('pointermove',pts[i].x,pts[i].y);}await this.sleep(60);const l=pts[pts.length-1];this.ev('pointerup',l.x,l.y);},async tap(x,y){this.ev('pointerdown',x,y);await this.sleep(70);this.ev('pointerup',x,y);}};return 1;})()`);
-const KEYS=['sling','defense','kart','gems','beat','path','pals'];const SEG=[];for(const k of KEYS){const len=await ev(`__t.TUTORIALS['${k}'].length`);SEG.push({name:'tut_'+k,dur:len+3,speed:1,go:`(()=>{__t.tutStart('${k}');return 1;})()`});}
+const KEYS=(process.argv[3]||'sling,defense,kart,gems,beat,path,pals,notes').split(',');const SEG=[];for(const k of KEYS){const len=await ev(`__t.TUTORIALS['${k}'].length`);SEG.push({name:'tut_'+k,dur:len+3,speed:1,go:`(()=>{__t.tutStart('${k}');return 1;})()`});}
 const rect=[];
 for(const seg of SEG){await ev(`__t.backToDrawing&&__t.backToDrawing(),1`);await sleep(300);
   const frames=[];const h=m=>{if(m.method==='Page.screencastFrame'){frames.push({data:m.params.data,ts:m.params.metadata.timestamp});send('Page.screencastFrameAck',{sessionId:m.params.sessionId});}};handlers.push(h);

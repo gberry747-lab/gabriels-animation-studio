@@ -41,7 +41,7 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 **Slingshot Siege (new, 60 levels)**
 
 - The big orange button in Games. Fling your own drawn hero from a slingshot at wobbly towers and knock out every monster. Drag back anywhere on the left half of the picture, aim with the dotted line, and let go.
-- Towers are built from real physics blocks: a hit shoves and topples them, glass shatters, wood breaks on big crashes, stone mostly falls over, and broken blocks split into tumbling pieces.
+- Towers are built from real physics blocks: a hit shoves and topples them, glass shatters, wood breaks on big crashes, stone mostly falls over, and broken blocks split into tumbling pieces. When a block under a monster breaks, the monster drops to the ground (a big enough fall knocks it out).
 - 5 worlds with 12 levels each: Backyard (wood and glass), Castle (tough stone), Jungle (towers up on stumps), Moon (low gravity, heroes fly far) and Volcano (TNT crates explode). Level 12 of every world is a 👑 boss fort. Beating a boss opens the next world.
 - Stars: 3 stars for using 2 or fewer heroes than you were given (or clearing it with one hero), 2 stars with one hero to spare, 1 star otherwise. Replay levels any time to improve.
 - Stars unlock powers: 💣 Boom at 5 stars, ⚡ Dash at 14, 🦘 Hop at 26, 🪨 Heavy at 40. Pick a power with the buttons at the top left, fling, then tap the screen in the air to use it. Each power works once per level.
@@ -98,6 +98,12 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - Make any friend your Buddy: your Buddy adds 10% bonus coins (at least 1) to every game.
 - Pals do not need a drawing, so this game works even before you draw a hero.
 - For developers: `node tools/pals-bot.js` plays every pal in every mini-game. A careful player always wins, a kid aiming at where the pal is now wins about 80% of Snack Tosses, and random tapping almost never works.
+
+**Game speed (new, every game)**
+
+- Every game has a speed button in the top bar (next to the music button). Tap it to go 🐢 0.75x, ▶ 1x, ⚡ 1.25x, 🚀 1.5x, 🔥 2x. Driving, flying and running games (Hero Kart, Sky Pilot, Space Quest, Sky Flap, Endless Dash, Jump & Run, Beat Run, and their holiday versions) also go 🌪️ 2.5x and 💥 3x.
+- Each game remembers its own speed, so Hero Kart can be on 3x while Gem Quest stays normal. The whole game speeds up together (music too in the rhythm games), and physics runs in small steps so nothing glitches at high speed.
+- How to play demos and online games always run at 1x.
 
 **Note Rush (new, 15 songs, piano or guitar)**
 
