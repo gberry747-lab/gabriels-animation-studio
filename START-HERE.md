@@ -73,6 +73,13 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - 3 worlds of 10 levels: Crystal Cave, Coral Reef, Sky Castle (later boards have holes).
 - For developers: `node tools/gems-bot.js [games per level]` has a greedy robot play every level on different random boards. It wins about 94% overall, every level at least 8 out of 12.
 
+**Beat Run (new, 18 songs)**
+
+- Your hero runs by themselves while the game plays a beat. Jump ON the beat when the glowing ▲ on the ground reaches your hero: a quick tap jumps over slimes, holding makes a big jump over tall boxes and gaps (those markers say HOLD). Tap the picture, the Jump button, Space or the up arrow.
+- 3 hearts per song; finishing with all 3 gives 3 stars. Jumping exactly on the beat scores PERFECT. Collect ♪ notes for points.
+- 3 places of 6 songs that get faster: Sunny Park (92 bpm), Ocean Pier, Space Station (up to 136 bpm). The beat and tune are made by the game's own synth, so there is no music to license. The Groove background music pauses while a song plays.
+- For developers: `node tools/beat-bot.js` checks a robot jumping exactly on the beat keeps all 3 hearts on every song, and that not jumping always loses. Jumping up to about 0.2 of a beat early or 0.15 late still clears everything.
+
 **Coins and the Gear Shop**
 
 - Every game pays coins when it ends: about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
