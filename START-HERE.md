@@ -99,6 +99,14 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - Pals do not need a drawing, so this game works even before you draw a hero.
 - For developers: `node tools/pals-bot.js` plays every pal in every mini-game. A careful player always wins, a kid aiming at where the pal is now wins about 80% of Snack Tosses, and random tapping almost never works.
 
+**Note Rush (new, 15 songs, piano or guitar)**
+
+- Notes fall down the lanes; tap each one as it reaches the line to play the song. Every song plays 3 times and gets faster each round ("FASTER!"), so the end of a song is the hardest part. You have 5 hearts and each missed note costs one.
+- Pick 🎹 Piano (4 lanes) or 🎸 Guitar (5 lanes, a bit harder) at the top of the menu. Your hero plays the instrument on stage while a crowd watches.
+- 3 stages: Starter (Hot Cross Buns, Mary Had a Little Lamb, Twinkle Twinkle, London Bridge, Row Row Row Your Boat), Rock (Frère Jacques, Old MacDonald, Yankee Doodle, When the Saints, Oh Susanna) and Superstar (Ode to Joy, Jingle Bells, Für Elise, Hall of the Mountain King, and the original Encore Rush). Finish a stage to open the next one.
+- Stars: finish = 1, hit 80% of the notes = 2, hit 95% = 3. All songs are old public-domain tunes (or our own), so there is nothing copyrighted in the game. Keyboard: arrow keys (plus F for the 5th guitar lane).
+- For developers: `node tools/notes-bot.js` plays every song on piano and guitar, on time and 0.1 seconds late, and checks that a player who never taps loses.
+
 **Endless Dash upgrades (new)**
 
 - Bought with coins in the 🛒 Gear Shop (bottom section) and always on once owned: 🚀 Rocket Start (zoom ahead safely for the first 3 seconds), 🫧 Bubble Shield (blocks one bump each run), 🧲 Star Magnet (pulls nearby stars to you), 🎒 Jetpack (two extra boosts in the air, so up to 4 jumps).
@@ -106,7 +114,7 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 
 **🎬 How to play (guided demos)**
 
-- Every big adventure (Slingshot Siege, Backyard Defense, Hero Kart, Gem Quest, Beat Run, Draw Path, Monster Pals) has a 🎬 How to play button at the top of its menu. It plays a real level by itself with big captions and a pointing finger showing each step, then offers "Let's play".
+- Every big adventure (Slingshot Siege, Backyard Defense, Hero Kart, Gem Quest, Beat Run, Draw Path, Monster Pals, Note Rush) has a 🎬 How to play button at the top of its menu. It plays a real level by itself with big captions and a pointing finger showing each step, then offers "Let's play".
 - Taps are ignored during a demo except ✖ Skip (bottom right). Nothing a demo does is kept: stars, coins, pals and the leaderboard are exactly as they were.
 - For developers: the demos are scripts in `TUTORIALS` (index.html). Tests run every demo and check it really plays (the slingshot shot clears the level, the path rescues the puppy, and so on) and leaves progress untouched.
 
