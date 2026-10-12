@@ -56,6 +56,14 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - 5 places with 6 levels each: Backyard, Park, Beach (faster slimes), Snow Fort (slower but tougher), Night Camp (toughest). Level 6 of each place ends with a 👑 King Slime, and beating it opens the next place.
 - For developers: `node tools/defense-bot.js` has a robot play all 30 levels. It must win them all, and doing nothing must lose them all. A robot that never uses Power Pals wins only about a third, so strategy matters.
 
+**Hero Kart (new, 5 roads)**
+
+- Drive your hero over endless hills. Hold ⚡ Go (or the right side of the picture, or the right arrow key) and 🛑 Brake (left). In the air, Go leans back and Brake leans forward. Landing on your head ends the drive.
+- Battery drains while you drive; grab 🔋 battery cells to refill it. They get further apart the further you go. Coins on the road go straight into your wallet.
+- Garage (in the Hero Kart menu): spend coins on ⚙️ Engine, 🛞 Tires (grip on sand and snow), 🔋 Battery and 🌀 Springs, 5 levels each.
+- Stars at 300 m, 1000 m and 2500 m. Reaching 600 m opens the next road: Green Hills, Desert Dunes, Snowy Peaks, Moon Base (low gravity), Volcano Road.
+- For developers: `node tools/kart-bot.js` drives every road with no upgrades, level 3 and maxed. A plain kart reaches about 300 m (one star, not enough to open the next road), level 3 about 2,300 to 3,400 m, and maxed about 5,700 m. A test checks no road ever gets steeper than 36 degrees.
+
 **Coins and the Gear Shop**
 
 - Every game pays coins when it ends: about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
