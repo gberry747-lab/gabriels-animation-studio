@@ -6,6 +6,11 @@
 <meta name="theme-color" content="#fffaf0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Animation Studio">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <meta name="description" content="Draw a little hero, dress it up, morph it into a character, then fight, brawl, explore a house and fly from Earth to the Sun. A playful sketchbook for iPad and computers.">
 <title>Gabriel's Animation Studio</title>
 <style>
@@ -750,6 +755,8 @@ $('vs2').onclick=()=>openVsSetup(false);$('vscpu').onclick=()=>openVsSetup(true)
 
 for(const ev of ['gesturestart','gesturechange','gestureend'])document.addEventListener(ev,e=>e.preventDefault());document.addEventListener('dblclick',e=>{if(e.target&&e.target.tagName!=='INPUT')e.preventDefault();},{passive:false});
 load();initControls();initPart2();initLeaderboards();initTabs();controls();if(strokes.length)hint('Your drawing is back! Tap a move, or keep drawing.');resize();requestAnimationFrame(frame);registerTools();
+// Offline app: cache the game so it opens from the Home Screen with no internet.
+if(typeof navigator!=='undefined'&&navigator.serviceWorker&&typeof location!=='undefined'&&/^https?:$/.test(location.protocol))window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 /* TEST_HOOK */
 })();
 

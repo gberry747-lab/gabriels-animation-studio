@@ -3,6 +3,15 @@
 The entire game is in `index.html`. There is nothing to install or build. For the iPad, use the hosted address:
 https://gberry747-lab.github.io/gabriels-animation-studio/
 
+**Install it as an app (works with no internet)**
+
+- On the iPad: open the address above in **Safari**, tap **Share**, then **Add to Home Screen**, then **Add**. An "Animation Studio" icon (a red stick figure) appears on the Home Screen and opens full-screen like a real app.
+- Open it once while online. After that it works with no Wi-Fi at all: in the car, on a plane, anywhere. Drawing, Power Moves, Gear Up and every single-device game work offline.
+- Needs internet: the online Top-10 leaderboards (scores made offline are kept and sent the next time it is online) and Online VS.
+- Updates arrive by themselves: whenever the app opens online it loads the newest version. If a change does not show, close the app fully and open it again.
+- Note: on iPad the Home Screen app keeps its own save, separate from Safari. Heroes and progress saved in Safari do not move into the app, so play from the app from now on.
+- How it works (for developers): `manifest.webmanifest` + `icons/` make it installable; `sw.js` is a service worker that caches the game (network first, cache when offline). Bump `VERSION` in `sw.js` only if you add new files to its `APP_FILES` list.
+
 **Drawing and dressing up**
 
 - Draw a stick figure with a round head, a body, two arms and two legs. A finger, Apple Pencil or mouse works. Leave a little space between the figure and any scenery so the game can tell them apart.
@@ -36,7 +45,7 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 
 **Saving**
 
-Drawing, outfit, morph, saved heroes, best scores and Space Quest progress save automatically in the same browser on the same device. Clearing browser website data removes them. A drawing made on a Mac does not automatically appear on the iPad.
+Drawing, outfit, morph, saved heroes, best scores and Space Quest progress save automatically in the same browser on the same device. Clearing browser website data removes them. A drawing made on a Mac does not automatically appear on the iPad, and the Home Screen app has its own save, separate from Safari.
 
 **Updating the hosted game**
 

@@ -13,6 +13,6 @@ A built-in original tune (Elevator Groove) plays by default; pick your own song 
 
 See `START-HERE.md` for how to play and how to update the hosted copy.
 
-Tip for iPad: open the link in Safari, tap Share, then **Add to Home Screen** so it opens full-screen like an app.
+**Install as an offline app:** open the link in Safari on the iPad, tap Share, then **Add to Home Screen**. Open it once online; after that it works with no internet (only the online leaderboards and Online VS need a connection). See `START-HERE.md`.
 
-Developer check: `node test/run.js` runs 48 headless logic checks (no packages needed).
+Developer check: `node test/run.js` runs 56 headless logic checks (no packages needed).
