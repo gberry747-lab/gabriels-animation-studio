@@ -42,10 +42,31 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - The big orange button in Games. Fling your own drawn hero from a slingshot at wobbly towers and knock out every monster. Drag back anywhere on the left half of the picture, aim with the dotted line, and let go.
 - 5 worlds with 12 levels each: Backyard (wood and glass), Castle (tough stone), Jungle (towers up on stumps), Moon (low gravity, heroes fly far) and Volcano (TNT crates explode). Level 12 of every world is a 👑 boss fort. Beating a boss opens the next world.
 - Stars: 3 stars for using 2 or fewer heroes than you were given (or clearing it with one hero), 2 stars with one hero to spare, 1 star otherwise. Replay levels any time to improve.
-- Stars unlock powers: 💣 Boom at 5 stars, ⚡ Dash at 14, ✨ Split at 26, 🪨 Heavy at 40. Pick a power with the buttons at the top left, fling, then tap the screen in the air to use it. Each power works once per level.
+- Stars unlock powers: 💣 Boom at 5 stars, ⚡ Dash at 14, 🦘 Hop at 26, 🪨 Heavy at 40. Pick a power with the buttons at the top left, fling, then tap the screen in the air to use it. Each power works once per level.
 - Total stars go on the Top 10 leaderboard (hold the button for a second to see it). Progress saves on the device.
 - Keyboard: arrow keys aim (up and down change the angle, left and right the strength), F fires or uses the power, G picks a power.
 - For developers: physics is Matter.js 0.20.0 (MIT) in `vendor/matter.min.js`. Levels come from a fixed recipe and seed, so level 7 is always the same. `node tools/sling-probe.js` checks that every level stands still before the first shot; `node tools/sling-solve.js <world 0-4>` plays every level by trying shots and proves each is beatable with plain heroes (all 60 were, most with heroes to spare).
+
+**Backyard Defense (new, 30 levels)**
+
+- The green button in Games. Slimes march across 5 lanes toward the clubhouse (HQ). Tap a guard card at the top, then tap a square (or drag the card onto a square). Every guard is your own hero wearing different gear.
+- Guards: ⚡ Power Pal (makes extra energy), 🏹 Archer, 🛡️ Shield Guard (very tough, slimes get stuck on it), ⚔️ Knight (hits up close), ❄️ Frost Wizard (slows slimes), 🔨 Hammer Hero (hits every slime nearby), 🔫 Blaster Ace (fast shots). New guards unlock as you clear levels. ↩️ takes a guard back for a little energy.
+- Energy builds up by itself; Power Pals add more. Popping slimes gives a little too.
+- A slime that reaches the clubhouse costs a heart. Lose all 3 and the level is lost. Finish with 3 hearts for 3 stars.
+- 5 places with 6 levels each: Backyard, Park, Beach (faster slimes), Snow Fort (slower but tougher), Night Camp (toughest). Level 6 of each place ends with a 👑 King Slime, and beating it opens the next place.
+- For developers: `node tools/defense-bot.js` has a robot play all 30 levels. It must win them all, and doing nothing must lose them all. A robot that never uses Power Pals wins only about a third, so strategy matters.
+
+**Coins and the Gear Shop**
+
+- Every game pays coins when it ends: about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
+- 🛒 Gear Shop (in Games and in Gear Up) sells 17 new items: skins (Candy, Shadow, Diamond, Neon, Dragon), capes (Lightning, Royal, Candy, Diamond), weapons (Fire sword, Ice sword, Star staff), hats (Unicorn horn, Headphones, Flame hair) and tops (Jersey, Knight armor). Each card shows your own hero wearing it. Prices run 60 to 300 coins.
+- Bought items appear in the Gear Up rows and work in every game. All the original gear stays free.
+- Coins and bought items save on the device (in the same save as game progress).
+
+**Keeping it original (important before selling it)**
+
+- Game rules and genres cannot be copyrighted, but characters, art, names, sounds and signature details can. Never copy names, characters, art or music from famous games, and never use their names in the game, the store listing or ads.
+- Slingshot Siege and Backyard Defense use your own hero, original slime monsters, original names and our own art. Backyard Defense deliberately has no plants, zombies, collectable sun, lawn mowers, seed packets or gravestones; Slingshot Siege has no birds or pigs. Keep it that way, and get a quick check from an intellectual-property lawyer before listing it for sale.
 
 **Controls**
 
