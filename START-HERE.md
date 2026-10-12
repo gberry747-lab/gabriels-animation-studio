@@ -64,6 +64,15 @@ https://gberry747-lab.github.io/gabriels-animation-studio/
 - Stars at 300 m, 1000 m and 2500 m. Reaching 600 m opens the next road: Green Hills, Desert Dunes, Snowy Peaks, Moon Base (low gravity), Volcano Road.
 - For developers: `node tools/kart-bot.js` drives every road with no upgrades, level 3 and maxed. A plain kart reaches about 300 m (one star, not enough to open the next road), level 3 about 2,300 to 3,400 m, and maxed about 5,700 m. A test checks no road ever gets steeper than 36 degrees.
 
+**Gem Quest (new, 30 levels)**
+
+- Match-3 puzzle. Swap two neighbouring power stones (drag one, or tap two) to line up 3 or more of a kind. 4 in a row makes a Line Stone (clears a row or column), an L or T makes a Bomb Stone (clears around it), 5 in a row makes a Star Stone (swap it with any stone to clear every stone of that colour). Swapping two special stones together sets off a big combo.
+- Each level has a goal: reach a score, crack all the ❄️ ice, or collect a number of one colour, before the moves run out. Moves left at the end give more stars.
+- Your hero stands next to the board and charges up as you match. When the meter is full, tap the hero for a free Hero Blast that clears the best 3 by 3 spot.
+- If nothing moves for a few seconds, a possible swap glows as a hint. If no swaps are possible, the board shuffles itself.
+- 3 worlds of 10 levels: Crystal Cave, Coral Reef, Sky Castle (later boards have holes).
+- For developers: `node tools/gems-bot.js [games per level]` has a greedy robot play every level on different random boards. It wins about 94% overall, every level at least 8 out of 12.
+
 **Coins and the Gear Shop**
 
 - Every game pays coins when it ends: about 4 to 12 for most games, more for winning, and the most for stars in Slingshot Siege and Backyard Defense (plus a bonus the first time a level is cleared).
