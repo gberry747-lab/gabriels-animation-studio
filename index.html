@@ -26,7 +26,7 @@
 .shop-btn{width:100%;min-width:0;padding:8px 6px}.shop-buy{background:var(--green)}.hero-card small{opacity:.7;font-size:14px}.pad-cluster.right:only-child{margin-left:auto}.season-btn{background:linear-gradient(var(--sa,#ffd166),var(--sb,#ff8a5c));color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.3);font-size:20px;min-height:58px}.season-cal{background:#fffdf6}.season-now{border-color:var(--accent);background:#fffbe6}.music-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.music-grid .world-card[aria-pressed=true] small{color:#fff}.big-games{grid-template-columns:repeat(3,1fr)}.big-games button{min-height:72px;font-size:20px}.big-games small{display:block;font-size:14px;opacity:.75;margin:2px 0 0}.big-games #notes{background:linear-gradient(#c9b8f5,#7b4fd0);color:#fff}.sl-sub{font-size:12px!important;color:var(--ink)!important;letter-spacing:0!important;line-height:1.1}.big-games #pals{background:linear-gradient(#d4f5e0,#7bd6a0)}.big-games #path{background:linear-gradient(#fff3c4,#ffd166)}.big-games #beat{background:linear-gradient(#ffe0f0,#ff9ccf)}.big-games #gems{background:linear-gradient(#e2d4ff,#b08cf0)}.big-games #kart{background:linear-gradient(#ffd0d0,#ff8a7a)}@media(max-width:620px){.big-games{grid-template-columns:repeat(2,1fr)}.big-games button{font-size:17px}}.games2 #defense{background:linear-gradient(#bfe8a8,#7cc25a);font-size:21px;min-height:70px}.games2 #sling{background:linear-gradient(#ffd98a,#ffab4a);font-size:22px;min-height:70px}.sl-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:8px}.sl-level{display:grid;justify-items:center;align-content:center;gap:2px;padding:6px 4px;min-height:66px}.sl-num{font-size:23px;font-weight:900}.sl-level small{color:#d98a00;font-size:17px;letter-spacing:1px;min-height:18px}.sl-power{border:2px solid #e5dfcd;border-radius:12px;padding:6px 10px;background:#fffdf6;font-weight:800;font-size:16px}.sl-power.locked{opacity:.55}@media(max-width:620px){.sl-grid{grid-template-columns:repeat(4,1fr)}}
 @media(prefers-reduced-motion:reduce){.go-splash,.confetti{display:none}.bump,.ouch,.result-badge{animation:none}.tabs button[aria-pressed=true]{animation:none}.gm-card::before{animation:none;display:none}button{transition:none}.moves button[data-move][aria-pressed=true]{animation:none}}
 /* Full-screen play (2026-10-29): while a game runs the page is one screen. Top bar in flow, the picture fills the rest, and the buttons float over its bottom edge so it can be as big as the screen. fitStage() sizes the picture and parks the buttons. */
-body.playing{padding:0;height:100svh;height:100dvh;overflow:hidden;display:flex;flex-direction:column;background:#1b1b2f}
+body.playing{position:relative;padding:0;height:100svh;height:100dvh;overflow:hidden;display:flex;flex-direction:column;background:#1b1b2f}
 body.playing .game-top{max-width:none;width:100%;margin:0;padding:4px 10px;gap:10px;border-radius:0;border-width:0 0 3px;box-shadow:none;flex:none}
 body.playing .game-top button{min-height:40px;padding:4px 10px}
 body.playing main{flex:1;min-height:0;width:100%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
@@ -37,6 +37,26 @@ body.playing #gameBottom button{pointer-events:auto;opacity:.88}
 body.playing .game-controls,body.playing #pads{max-width:none;margin:0}
 body.playing .game-message{margin:0 auto 6px;max-width:min(640px,90%);background:#ffffffe0;border-radius:999px;padding:4px 14px;font-size:17px;width:fit-content;min-height:0}
 body.playing .game-message:empty{display:none}
+/* Short screens (a phone turned sideways): the top bar floats over the picture as small corner pills, so the picture gets the full height. fitStage() ignores the bar's height below 520px too. */
+@media(max-height:520px){
+body.playing .game-top{position:absolute;top:0;left:0;right:0;z-index:6;background:transparent;border:0;box-shadow:none;padding:4px 6px;gap:6px;flex-wrap:nowrap;pointer-events:none}
+body.playing .game-top>*{pointer-events:auto}
+body.playing .game-top strong{display:none}
+body.playing .game-top .game-stats{margin-left:auto;gap:6px;font-size:15px}
+body.playing .game-stats>*{font-size:15px;padding:3px 9px}
+body.playing .game-top button{min-height:32px;font-size:13px;padding:2px 8px}
+body.playing .game-top .header-buttons{gap:4px}
+body.playing .game-message{font-size:14px;padding:3px 10px;margin-bottom:3px}
+}
+/* Narrow screens (phone upright): the right button cluster may wrap (Punch Kick / Block) instead of running off the edge */
+@media(max-width:620px){
+#pads{align-items:flex-end}
+.pad-cluster{min-width:0}
+.pad-cluster.left{flex:none}
+.pad-cluster.right{flex:1 1 auto}
+.pad-row{flex-wrap:wrap;justify-content:flex-end}
+.control.pad.action{width:108px;font-size:16px}
+}
 /* Monster Pals: one big PLAY button and colourful place cards */
 .pal-play{width:100%;min-height:76px;font-size:26px;border-radius:22px;margin:8px 0 4px;background:linear-gradient(#ffd96b,#ff9f1c);color:var(--ink)}
 .world-card.pal-place{background:linear-gradient(var(--c1,#fff),var(--c2,#eee));min-height:118px;font-size:19px;gap:4px}
@@ -216,7 +236,7 @@ drawParticles(g);ctx.restore();if(!g.ink)actorInk(g);ctx.save();if(g.type==='pla
 // Make the game picture shrink until the whole game screen (title bar, picture, message and buttons) fits the iPad,
 // whatever the orientation, Safari bars or home-bar space.
 function fitStage(){const st=$('stage'),de=document.documentElement;if(!st||!st.style||!de||!document.body.classList||typeof window.innerHeight!=='number')return;st.style.width='';st.style.marginTop='';if(!document.body.classList.contains('playing'))return;
-const top=$('gameTop'),bot=$('gameBottom'),main=st.parentElement,topH=top&&top.offsetHeight||0,botH=bot&&bot.offsetHeight||0,availH=window.innerHeight-topH,availW=(main&&main.clientWidth)||window.innerWidth;
+const top=$('gameTop'),bot=$('gameBottom'),main=st.parentElement,topH=window.innerHeight<=520?0:(top&&top.offsetHeight||0),botH=bot&&bot.offsetHeight||0,availH=window.innerHeight-topH,availW=(main&&main.clientWidth)||window.innerWidth;
 if(availH>0&&availW>0){const w=Math.max(300,Math.min(availW,Math.floor(availH*16/9)));st.style.width=w+'px';
 // Spare height (portrait): picture and buttons sit together in the middle. No spare height: picture at the top, buttons float over its bottom edge.
 const off=Math.max(0,Math.floor((availH-w*9/16-botH-8)/2));st.style.marginTop=off+'px';if(bot&&bot.style)bot.style.bottom=off+'px';}
