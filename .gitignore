@@ -1,3 +1,7 @@
 .claude/
 .DS_Store
 zz-*
+tools/qa/node_modules/
+tools/qa/package*.json
+tools/qa/shots/
+tools/qa/patches/
